@@ -46,6 +46,16 @@ const thumbnails = [
     alt: "$20K Fine - Amazon business thumbnail",
     category: "Business",
   },
+  {
+    src: "/images/62-vs-70.png",
+    alt: "62 vs 70 Big Mistake - Retirement age comparison thumbnail",
+    category: "Finance",
+  },
+  {
+    src: "/images/most-people-quit.jpg",
+    alt: "Most People Quit - Etsy e-commerce motivation thumbnail",
+    category: "Business",
+  },
 ]
 
 export function PortfolioSection() {

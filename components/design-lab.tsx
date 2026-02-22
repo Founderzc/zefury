@@ -28,40 +28,42 @@ export function DesignLab() {
         </div>
 
         {/* Before / After */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="flex flex-col gap-4">
-            <div className="relative group overflow-hidden rounded-xl border border-border">
-              <Image
-                src="/images/thumb-before.jpg"
-                alt="Before - Original thumbnail design"
-                width={600}
-                height={340}
-                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-              />
+            <div className="relative group overflow-hidden rounded-xl border border-border shadow-sm">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/before-raw.png"
+                  alt="Before - Raw unedited photo of fitness model"
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="absolute top-3 left-3 bg-destructive text-destructive-foreground px-3 py-1 rounded-md text-xs font-bold uppercase">
                 Before
               </div>
             </div>
             <p className="text-sm text-muted-foreground text-center font-mono">
-              Basic composition, flat lighting, low engagement
+              Raw photo, no composition, plain background
             </p>
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="relative group overflow-hidden rounded-xl border border-accent/30">
-              <Image
-                src="/images/thumb-after.jpg"
-                alt="After - Enhanced thumbnail design"
-                width={600}
-                height={340}
-                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-              />
+            <div className="relative group overflow-hidden rounded-xl border-2 border-accent/40 shadow-lg shadow-accent/10">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/after-escape-plan.png"
+                  alt="After - The Escape Plan 2026 cinematic thumbnail design"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="absolute top-3 left-3 bg-accent text-accent-foreground px-3 py-1 rounded-md text-xs font-bold uppercase">
                 After
               </div>
             </div>
             <p className="text-sm text-muted-foreground text-center font-mono">
-              Cinematic contrast, bold text, high CTR potential
+              Cinematic lighting, bold text, icon storytelling, high CTR
             </p>
           </div>
         </div>
