@@ -118,7 +118,8 @@ export function PortfolioSection() {
           {filtered.map((thumb, i) => (
             <div
               key={`${thumb.src}-${i}`}
-              className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-sm hover:shadow-xl hover:border-accent/30 transition-all duration-300"
+              className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-sm hover:shadow-xl hover:border-accent/30 hover:-translate-y-2 transition-all duration-300"
+              style={{ animationDelay: `${i * 80}ms` }}
             >
               <div className="relative aspect-video overflow-hidden">
                 <Image

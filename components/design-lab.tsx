@@ -29,8 +29,8 @@ export function DesignLab() {
 
         {/* Before / After */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="flex flex-col gap-4">
-            <div className="relative group overflow-hidden rounded-xl border border-border shadow-sm">
+          <div className="flex flex-col gap-4 hover:-translate-y-1 transition-transform duration-300">
+            <div className="relative group overflow-hidden rounded-xl border border-border shadow-sm hover:shadow-xl transition-shadow duration-300">
               <div className="relative aspect-video">
                 <Image
                   src="/images/before-raw.png"
@@ -48,8 +48,8 @@ export function DesignLab() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <div className="relative group overflow-hidden rounded-xl border-2 border-accent/40 shadow-lg shadow-accent/10">
+          <div className="flex flex-col gap-4 hover:-translate-y-1 transition-transform duration-300">
+            <div className="relative group overflow-hidden rounded-xl border-2 border-accent/40 shadow-lg shadow-accent/10 hover:shadow-xl hover:shadow-accent/20 transition-shadow duration-300">
               <div className="relative aspect-video">
                 <Image
                   src="/images/after-escape-plan.png"

@@ -30,13 +30,14 @@ export function TrustSection() {
 
           {/* Creator Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-8 w-full max-w-3xl">
-            {creators.map((creator) => (
+            {creators.map((creator, i) => (
               <div
                 key={creator.name}
-                className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border p-6 hover:border-accent/50 hover:shadow-md transition-all"
+                className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border p-6 hover:border-accent/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                style={{ animationDelay: `${i * 120}ms` }}
               >
                 {/* Avatar placeholder */}
-                <div className="h-14 w-14 rounded-full bg-muted flex items-center justify-center text-lg font-bold text-muted-foreground">
+                <div className="h-14 w-14 rounded-full bg-muted flex items-center justify-center text-lg font-bold text-muted-foreground transition-colors duration-300 group-hover:bg-accent/10">
                   {creator.name.charAt(0)}
                 </div>
                 <div className="text-center">

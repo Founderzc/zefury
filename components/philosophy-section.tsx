@@ -28,8 +28,12 @@ export function PhilosophySection() {
                 { value: "500+", label: "Thumbnails" },
                 { value: "12%", label: "Avg CTR" },
                 { value: "50M+", label: "Views Generated" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center p-4 rounded-xl bg-card border border-border">
+              ].map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className="text-center p-4 rounded-xl bg-card border border-border hover:border-accent/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
                   <p className="text-2xl font-bold text-foreground">{stat.value}</p>
                   <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
                 </div>
@@ -38,9 +42,9 @@ export function PhilosophySection() {
           </div>
 
           {/* Right - Laptop mockup */}
-          <div className="relative">
-            <div className="absolute -inset-8 bg-accent/5 rounded-3xl blur-3xl" />
-            <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl">
+          <div className="relative group">
+            <div className="absolute -inset-8 bg-accent/5 rounded-3xl blur-3xl animate-glow-pulse" />
+            <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] group-hover:shadow-accent/10">
               <Image
                 src="/images/laptop-mockup.jpg"
                 alt="Thumbnail design workspace"

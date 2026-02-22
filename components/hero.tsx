@@ -12,29 +12,29 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-6 py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="flex flex-col gap-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-4 py-2 w-fit">
+          <div className="flex flex-col gap-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-4 py-2 w-fit animate-fade-in-left fill-both opacity-0">
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               <span className="text-xs font-medium text-muted-foreground tracking-wide uppercase">
                 Available for Projects
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-foreground">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-foreground animate-fade-in-left fill-both delay-100 opacity-0">
               {"HEY, I'M"}
               <br />
               <span className="text-accent">ZEESHAN.</span>
             </h1>
 
-            <p className="text-sm font-medium text-accent uppercase tracking-wider">
+            <p className="text-sm font-medium text-accent uppercase tracking-wider animate-fade-in-left fill-both delay-200 opacity-0">
               Visual Strategist & Thumbnail Designer
             </p>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed font-mono">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed font-mono animate-fade-in-left fill-both delay-300 opacity-0">
               I help YouTube creators turn impressions into views. My designs are not just art — they are data-driven visual strategies built to win the click-war.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap gap-4 pt-2 animate-fade-in fill-both delay-400 opacity-0">
               <a
                 href="#portfolio"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
@@ -53,7 +53,7 @@ export function Hero() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-4 pt-4">
+            <div className="flex items-center gap-4 pt-4 animate-fade-in fill-both delay-500 opacity-0">
               <a
                 href="https://www.instagram.com/zscore_pix"
                 target="_blank"
@@ -87,21 +87,32 @@ export function Hero() {
           </div>
 
           {/* Right - Profile Card */}
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center animate-fade-in-right fill-both delay-300">
             <div className="relative">
+              {/* Rotating ring 1 */}
+              <div className="absolute -inset-5 animate-spin-slow pointer-events-none">
+                <div className="absolute inset-0 rounded-[1.75rem] border-2 border-transparent border-t-accent border-r-accent/40 opacity-60" />
+              </div>
+              {/* Rotating ring 2 (reverse) */}
+              <div className="absolute -inset-8 animate-spin-slow-reverse pointer-events-none">
+                <div className="absolute inset-0 rounded-[2rem] border border-transparent border-b-accent/30 border-l-accent/10 opacity-40" />
+              </div>
+
               {/* Glow effect */}
-              <div className="absolute -inset-4 bg-accent/20 rounded-3xl blur-2xl" />
+              <div className="absolute -inset-4 bg-accent/20 rounded-3xl blur-2xl animate-glow-pulse" />
 
               {/* Profile card */}
-              <div className="relative bg-card rounded-2xl border border-border p-3 shadow-xl">
+              <div className="relative bg-card rounded-2xl border border-border p-3 shadow-xl animate-fade-in-scale fill-both delay-400 hover:shadow-2xl hover:shadow-accent/10 transition-shadow duration-500">
                 <div className="relative aspect-[4/5] w-full max-w-[380px] overflow-hidden rounded-xl">
                   <Image
                     src="/images/profile.jpg"
                     alt="Zeeshan - YouTube Thumbnail Designer"
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
                     priority
                   />
+                  {/* Subtle gradient overlay at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none" />
                 </div>
                 <div className="flex items-center justify-between px-2 pt-3 pb-1">
                   <div>
@@ -109,20 +120,20 @@ export function Hero() {
                     <p className="text-xs text-muted-foreground">Visual Strategist & Thumbnail Designer</p>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-accent" />
+                    <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
                     <span className="text-xs text-accent font-medium">Online</span>
                   </div>
                 </div>
               </div>
 
               {/* Floating stats card */}
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl border border-border px-4 py-3 shadow-lg">
+              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl border border-border px-4 py-3 shadow-lg animate-float-y animate-fade-in fill-both delay-600 hover:scale-105 transition-transform duration-300">
                 <p className="text-2xl font-bold text-foreground">500+</p>
                 <p className="text-xs text-muted-foreground">Thumbnails Designed</p>
               </div>
 
               {/* Floating CTR card */}
-              <div className="absolute -top-4 -right-4 bg-accent rounded-xl px-4 py-3 shadow-lg">
+              <div className="absolute -top-4 -right-4 bg-accent rounded-xl px-4 py-3 shadow-lg animate-float-y-alt animate-fade-in fill-both delay-700 hover:scale-105 transition-transform duration-300">
                 <p className="text-2xl font-bold text-accent-foreground">12%</p>
                 <p className="text-xs text-accent-foreground/80">Avg. CTR Boost</p>
               </div>

@@ -44,12 +44,13 @@ export function CaseStudySection() {
 
         {/* Metrics Strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-16">
-          {metrics.map((metric) => (
+          {metrics.map((metric, i) => (
             <div
               key={metric.label}
-              className="flex flex-col items-center gap-3 rounded-2xl bg-card border border-border p-6 hover:border-accent/40 hover:shadow-lg transition-all duration-300"
+              className="flex flex-col items-center gap-3 rounded-2xl bg-card border border-border p-6 hover:border-accent/40 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-accent/10 text-accent">
+              <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-accent/10 text-accent transition-transform duration-300 hover:scale-110 hover:rotate-3">
                 <metric.icon className="h-6 w-6" />
               </div>
               <p className="text-3xl font-bold text-foreground">{metric.value}</p>
@@ -115,12 +116,13 @@ export function CaseStudySection() {
                 title: "Cinematic Execution",
                 description: "Every element from lighting to composition is crafted with cinematic precision for maximum visual impact.",
               },
-            ].map((item) => (
+            ].map((item, i) => (
               <div
                 key={item.step}
-                className="relative flex flex-col gap-4 rounded-2xl bg-card border border-border p-6 hover:border-accent/40 transition-colors"
+                className="relative flex flex-col gap-4 rounded-2xl bg-card border border-border p-6 hover:border-accent/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <span className="text-5xl font-bold text-accent/20">{item.step}</span>
+                <span className="text-5xl font-bold text-accent/20 transition-colors duration-300 group-hover:text-accent/40">{item.step}</span>
                 <h4 className="text-lg font-bold text-foreground">{item.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed font-mono">
                   {item.description}

@@ -15,7 +15,7 @@ export function Footer() {
             <span className="h-px w-8 bg-accent" />
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-2xl">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-2xl text-balance">
             {"Want Higher CTR? "}
             <span className="text-accent">{"Let's Talk."}</span>
           </h2>
@@ -75,7 +75,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent transition-colors"
+              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent hover:scale-110 transition-all duration-300"
             >
               <Instagram className="h-4 w-4" />
             </a>
@@ -84,7 +84,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
-              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent transition-colors"
+              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent hover:scale-110 transition-all duration-300"
             >
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.18 8.18 0 004.76 1.52V7.05a4.83 4.83 0 01-1-.36z"/>
@@ -95,7 +95,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Behance Portfolio"
-              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent transition-colors"
+              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent hover:scale-110 transition-all duration-300"
             >
               <ExternalLink className="h-4 w-4" />
             </a>
