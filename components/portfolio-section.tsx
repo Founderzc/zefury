@@ -7,34 +7,44 @@ const categories = ["All", "Business", "Finance", "Gaming", "Lifestyle"]
 
 const thumbnails = [
   {
-    src: "/images/thumb-1.jpg",
-    alt: "$24K From 1 Product thumbnail",
+    src: "/images/24k-product.png",
+    alt: "$24K From 1 Product - E-commerce thumbnail design",
     category: "Business",
   },
   {
-    src: "/images/thumb-2.jpg",
-    alt: "10K/Day thumbnail",
+    src: "/images/first-5-years.jpg",
+    alt: "First 5 Years Matter - Financial planning thumbnail",
     category: "Finance",
   },
   {
-    src: "/images/thumb-3.jpg",
-    alt: "Before and after thumbnail",
-    category: "Lifestyle",
-  },
-  {
-    src: "/images/thumb-4.jpg",
-    alt: "$148K/Month thumbnail",
-    category: "Finance",
-  },
-  {
-    src: "/images/thumb-5.jpg",
-    alt: "Gaming content thumbnail",
+    src: "/images/rank-push.png",
+    alt: "1V4 Clutch - PUBG Mobile gaming thumbnail",
     category: "Gaming",
   },
   {
-    src: "/images/thumb-6.jpg",
-    alt: "30 Day Challenge thumbnail",
+    src: "/images/plan-fails-70.png",
+    alt: "Plan Fails at 70 - Retirement planning thumbnail",
+    category: "Finance",
+  },
+  {
+    src: "/images/travel-picks-2026.png",
+    alt: "2026 Travel Picks - Travel vlog thumbnail",
     category: "Lifestyle",
+  },
+  {
+    src: "/images/viral-niches-2026.jpg",
+    alt: "Viral USA Niches in 2026 - YouTube business thumbnail",
+    category: "Business",
+  },
+  {
+    src: "/images/bear-hunt.jpg",
+    alt: "Bear Hunt Gone Wrong - Adventure story thumbnail",
+    category: "Lifestyle",
+  },
+  {
+    src: "/images/20k-fine.jpg",
+    alt: "$20K Fine - Amazon business thumbnail",
+    category: "Business",
   },
 ]
 
