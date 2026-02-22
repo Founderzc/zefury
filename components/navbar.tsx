@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -16,9 +17,18 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <a href="#home" className="text-xl font-bold tracking-tight text-foreground">
-          ZEESHAN<span className="text-accent">.</span>
+      <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
+        <a href="#home" className="flex items-center gap-2">
+          <Image
+            src="/images/zscore-logo.png"
+            alt="Z Score Logo"
+            width={40}
+            height={40}
+            className="h-9 w-9 brightness-0 transition-opacity hover:opacity-80"
+          />
+          <span className="text-lg font-bold tracking-tight text-foreground">
+            Z<span className="text-accent">SCORE</span>
+          </span>
         </a>
 
         {/* Desktop Nav */}

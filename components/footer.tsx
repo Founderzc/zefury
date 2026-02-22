@@ -1,6 +1,7 @@
 "use client"
 
-import { Mail, ArrowUpRight, Youtube, Instagram, Twitter, Linkedin, MessageCircle, Phone } from "lucide-react"
+import Image from "next/image"
+import { Mail, ArrowUpRight, Instagram, ExternalLink, MessageCircle, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -35,7 +36,7 @@ export function Footer() {
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <a
-              href="mailto:hello@zeeshan.design"
+              href="mailto:infozedscoreteam@gmail.com"
               className="inline-flex items-center gap-2 rounded-lg border-2 border-primary-foreground/20 bg-transparent px-6 py-3 text-sm font-semibold text-primary-foreground hover:border-primary-foreground/40 transition-colors"
             >
               <Mail className="h-4 w-4" />
@@ -56,23 +57,48 @@ export function Footer() {
             </a>
           </div>
 
+          {/* Email display */}
+          <div className="flex items-center gap-2 pt-2">
+            <Mail className="h-4 w-4 text-accent" />
+            <a
+              href="mailto:infozedscoreteam@gmail.com"
+              className="text-sm text-primary-foreground/60 hover:text-accent transition-colors font-mono"
+            >
+              infozedscoreteam@gmail.com
+            </a>
+          </div>
+
           {/* Social Icons */}
           <div className="flex items-center gap-4 pt-8">
-            {[
-              { icon: Youtube, label: "YouTube", href: "#" },
-              { icon: Instagram, label: "Instagram", href: "#" },
-              { icon: Twitter, label: "Twitter", href: "#" },
-              { icon: Linkedin, label: "LinkedIn", href: "#" },
-            ].map(({ icon: Icon, label, href }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent transition-colors"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+            <a
+              href="https://www.instagram.com/zscore_pix"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent transition-colors"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@zscore_pix"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent transition-colors"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.18 8.18 0 004.76 1.52V7.05a4.83 4.83 0 01-1-.36z"/>
+              </svg>
+            </a>
+            <a
+              href="https://www.behance.net/gallery/242444841/High-Impact-Thumbnail-Collection-2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Behance Portfolio"
+              className="flex items-center justify-center h-10 w-10 rounded-full border border-primary-foreground/20 text-primary-foreground/60 hover:text-accent hover:border-accent transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>
@@ -80,9 +106,18 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-primary-foreground/40 font-mono">
-            {"© 2026 Zeeshan. All rights reserved."}
-          </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/zscore-logo.png"
+              alt="Z Score Logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 invert"
+            />
+            <p className="text-sm text-primary-foreground/40 font-mono">
+              {"© 2026 Z Score | Zefury. All rights reserved."}
+            </p>
+          </div>
           <p className="text-sm text-primary-foreground/40 font-mono">
             Designed with precision. Built with purpose.
           </p>

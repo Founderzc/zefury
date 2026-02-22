@@ -15,8 +15,8 @@ const _inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Zeeshan | YouTube Thumbnail Designer',
-  description: 'High-CTR YouTube thumbnail designer. Cinematic designs that drive clicks and views. Ghost designer for 100K+ to 900K+ subscriber channels.',
+  title: 'Z Score | Zefury - High-Impact YouTube Thumbnail Designer',
+  description: 'Visual Strategist & Thumbnail Designer. I help YouTube creators turn impressions into views with data-driven, cinematic thumbnail designs. Ghost designer for 100K+ to 900K+ subscriber channels.',
   generator: 'v0.app',
   icons: {
     icon: [

@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowDown, Youtube, Instagram, Twitter, Linkedin } from "lucide-react"
+import { ArrowDown, Instagram, ExternalLink } from "lucide-react"
 
 export function Hero() {
   return (
@@ -26,8 +26,12 @@ export function Hero() {
               <span className="text-accent">ZEESHAN.</span>
             </h1>
 
+            <p className="text-sm font-medium text-accent uppercase tracking-wider">
+              Visual Strategist & Thumbnail Designer
+            </p>
+
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed font-mono">
-              I design high-CTR YouTube thumbnails that stop the scroll. Cinematic visuals, bold storytelling, and viewer psychology — every pixel serves a purpose.
+              I help YouTube creators turn impressions into views. My designs are not just art — they are data-driven visual strategies built to win the click-war.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
@@ -50,21 +54,35 @@ export function Hero() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-4 pt-4">
-              {[
-                { icon: Youtube, label: "YouTube", href: "#" },
-                { icon: Instagram, label: "Instagram", href: "#" },
-                { icon: Twitter, label: "Twitter", href: "#" },
-                { icon: Linkedin, label: "LinkedIn", href: "#" },
-              ].map(({ icon: Icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="flex items-center justify-center h-10 w-10 rounded-full bg-card border border-border text-muted-foreground hover:text-accent hover:border-accent transition-colors"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a
+                href="https://www.instagram.com/zscore_pix"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-card border border-border text-muted-foreground hover:text-accent hover:border-accent transition-colors"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@zscore_pix"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-card border border-border text-muted-foreground hover:text-accent hover:border-accent transition-colors"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.18 8.18 0 004.76 1.52V7.05a4.83 4.83 0 01-1-.36z"/>
+                </svg>
+              </a>
+              <a
+                href="https://www.behance.net/gallery/242444841/High-Impact-Thumbnail-Collection-2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Behance"
+                className="flex items-center justify-center h-10 w-10 rounded-full bg-card border border-border text-muted-foreground hover:text-accent hover:border-accent transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
@@ -87,8 +105,8 @@ export function Hero() {
                 </div>
                 <div className="flex items-center justify-between px-2 pt-3 pb-1">
                   <div>
-                    <p className="font-bold text-foreground text-sm">Zeeshan</p>
-                    <p className="text-xs text-muted-foreground">Thumbnail Designer</p>
+                    <p className="font-bold text-foreground text-sm">Zeeshan <span className="text-accent">| Z Score</span></p>
+                    <p className="text-xs text-muted-foreground">Visual Strategist & Thumbnail Designer</p>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="h-2 w-2 rounded-full bg-accent" />
