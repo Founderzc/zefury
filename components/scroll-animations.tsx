@@ -1,6 +1,7 @@
 "use client"
 
 import { AnimatedSection } from "@/components/animated-section"
+import { AboutSection } from "@/components/about-section"
 import { TrustSection } from "@/components/trust-section"
 import { PhilosophySection } from "@/components/philosophy-section"
 import { DesignLab } from "@/components/design-lab"
@@ -12,6 +13,10 @@ export function ScrollAnimations() {
   return (
     <>
       <AnimatedSection>
+        <AboutSection />
+      </AnimatedSection>
+
+      <AnimatedSection delay={100}>
         <TrustSection />
       </AnimatedSection>
 
