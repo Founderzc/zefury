@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { CustomCursor } from '@/components/custom-cursor'
 import './globals.css'
 
 const _spaceGrotesk = Space_Grotesk({
@@ -51,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${_spaceGrotesk.variable} ${_inter.variable} font-sans antialiased`}>
+        <CustomCursor />
         {children}
         <Analytics />
       </body>

@@ -107,3 +107,48 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Custom cursor - hide default on non-touch devices */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  border-radius: 9999px;
+  background-color: oklch(0.75 0.18 145);
+  margin-left: -4px;
+  margin-top: -4px;
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.3s ease;
+  will-change: transform;
+  mix-blend-mode: normal;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99998;
+  border-radius: 9999px;
+  border-style: solid;
+  margin-left: -18px;
+  margin-top: -18px;
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease,
+    border-width 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
+}
+
+/* Ensure touch devices keep normal cursors */
+@media (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
