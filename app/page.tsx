@@ -8,7 +8,4 @@ import { Footer } from "@/components/footer"
 import { ScrollAnimations } from "@/components/scroll-animations"
 
 export default function Home() {
-  return (
-PortfolioSection, Footer
-  )
-}
+<PortfolioSection />
