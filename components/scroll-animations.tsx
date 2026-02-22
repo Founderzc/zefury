@@ -4,6 +4,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { TrustSection } from "@/components/trust-section"
 import { PhilosophySection } from "@/components/philosophy-section"
 import { DesignLab } from "@/components/design-lab"
+import { CaseStudySection } from "@/components/case-study-section"
 import { PortfolioSection } from "@/components/portfolio-section"
 import { Footer } from "@/components/footer"
 
@@ -20,6 +21,10 @@ export function ScrollAnimations() {
 
       <AnimatedSection delay={100}>
         <DesignLab />
+      </AnimatedSection>
+
+      <AnimatedSection delay={100}>
+        <CaseStudySection />
       </AnimatedSection>
 
       <AnimatedSection delay={100}>
