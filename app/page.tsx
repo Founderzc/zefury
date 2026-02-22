@@ -12,7 +12,8 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <ScrollAnimations />
+      <rounded-xl
+    />
     </main>
   )
 }
