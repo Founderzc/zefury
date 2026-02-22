@@ -1,0 +1,115 @@
+"use client"
+
+import { useState } from "react"
+import Image from "next/image"
+
+const categories = ["All", "Business", "Finance", "Gaming", "Lifestyle"]
+
+const thumbnails = [
+  {
+    src: "/images/thumb-1.jpg",
+    alt: "$24K From 1 Product thumbnail",
+    category: "Business",
+  },
+  {
+    src: "/images/thumb-2.jpg",
+    alt: "10K/Day thumbnail",
+    category: "Finance",
+  },
+  {
+    src: "/images/thumb-3.jpg",
+    alt: "Before and after thumbnail",
+    category: "Lifestyle",
+  },
+  {
+    src: "/images/thumb-4.jpg",
+    alt: "$148K/Month thumbnail",
+    category: "Finance",
+  },
+  {
+    src: "/images/thumb-5.jpg",
+    alt: "Gaming content thumbnail",
+    category: "Gaming",
+  },
+  {
+    src: "/images/thumb-6.jpg",
+    alt: "30 Day Challenge thumbnail",
+    category: "Lifestyle",
+  },
+]
+
+export function PortfolioSection() {
+  const [activeCategory, setActiveCategory] = useState("All")
+
+  const filtered =
+    activeCategory === "All"
+      ? thumbnails
+      : thumbnails.filter((t) => t.category === activeCategory)
+
+  return (
+    <section id="portfolio" className="bg-background py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col items-center text-center gap-6 pb-12">
+          <div className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground uppercase tracking-widest">
+            <span className="h-px w-8 bg-accent" />
+            Selected Work
+            <span className="h-px w-8 bg-accent" />
+          </div>
+
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
+            Portfolio
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-xl font-mono">
+            Bold thumbnails that blend cinematic visuals with high-impact CTR strategy.
+          </p>
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap items-center justify-center gap-3 pb-12">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
+                activeCategory === cat
+                  ? "bg-accent text-accent-foreground shadow-md"
+                  : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-accent/50"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Thumbnail Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((thumb, i) => (
+            <div
+              key={`${thumb.src}-${i}`}
+              className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-sm hover:shadow-xl hover:border-accent/30 transition-all duration-300"
+            >
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={thumb.src}
+                  alt={thumb.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-primary-foreground font-semibold text-sm bg-accent px-4 py-2 rounded-lg">
+                    View Full Size
+                  </span>
+                </div>
+              </div>
+              <div className="px-4 py-3 flex items-center justify-between">
+                <span className="text-xs font-medium text-muted-foreground">{thumb.category}</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
