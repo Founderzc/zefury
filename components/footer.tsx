@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, ArrowUpRight, Youtube, Instagram, Twitter, Linkedin } from "lucide-react"
+import { Mail, ArrowUpRight, Youtube, Instagram, Twitter, Linkedin, MessageCircle, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -25,18 +25,34 @@ export function Footer() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <a
-              href="mailto:hello@zeeshan.design"
+              href="https://wa.me/923035408206?text=Hi%20Zeeshan!%20I%20want%20to%20discuss%20a%20thumbnail%20project."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90 transition-opacity"
             >
-              <Mail className="h-4 w-4" />
-              Get in Touch
+              <MessageCircle className="h-4 w-4" />
+              WhatsApp Me
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <a
-              href="#portfolio"
+              href="mailto:hello@zeeshan.design"
               className="inline-flex items-center gap-2 rounded-lg border-2 border-primary-foreground/20 bg-transparent px-6 py-3 text-sm font-semibold text-primary-foreground hover:border-primary-foreground/40 transition-colors"
             >
-              View Portfolio
+              <Mail className="h-4 w-4" />
+              Email Me
+            </a>
+          </div>
+
+          {/* WhatsApp number display */}
+          <div className="flex items-center gap-2 pt-2">
+            <Phone className="h-4 w-4 text-accent" />
+            <a
+              href="https://wa.me/923035408206"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary-foreground/60 hover:text-accent transition-colors font-mono"
+            >
+              +92 303 540 8206
             </a>
           </div>
 

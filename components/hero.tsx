@@ -39,7 +39,9 @@ export function Hero() {
                 <ArrowDown className="h-4 w-4" />
               </a>
               <a
-                href="#contact"
+                href="https://wa.me/923035408206?text=Hi%20Zeeshan!%20I%27d%20like%20a%20free%20thumbnail%20test."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-accent bg-transparent px-6 py-3 text-sm font-semibold text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 Get Free Thumbnail Test
