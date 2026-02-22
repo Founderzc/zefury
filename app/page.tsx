@@ -9,11 +9,6 @@ import { ScrollAnimations } from "@/components/scroll-animations"
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <rounded-xl
-    />
-    </main>
+PortfolioSection, Footer
   )
 }
