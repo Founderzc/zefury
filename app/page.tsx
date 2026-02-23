@@ -32,3 +32,5 @@ export default function Home() {
       {/* Footer Section */}
       <Footer />
     </main>
+    )
+}
